@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+.wrapper {
+  display: flex; /* Use flexbox for layout */
+  height: 100vh; /* Set the height to 100% of viewport height */
+  flex-wrap: wrap;
+}
+.app {
+  flex: 20; /* Set the content to take up remaining space */
+  padding: 20px;
+  background-color: #ffffff;
+  overflow-y: auto; /* Add vertical scroll if content exceeds height */
+}

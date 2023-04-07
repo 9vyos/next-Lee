@@ -1,0 +1,13 @@
+.main_wrap {
+  height: 100%;
+}
+.main_wrap .w_100 {
+  width: 100vw;
+  height: 30vh;
+  border: 2px solid #222;
+}
+.main_wrap .w_30 {
+  width: 25vw;
+  height: 30vh;
+  border: 2px solid #222;
+}
