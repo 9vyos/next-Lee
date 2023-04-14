@@ -2,6 +2,7 @@
 import React, { useState, memo, useEffect, useRef } from "react";
 import EditorJS, { OutputData } from "@editorjs/editorjs";
 import { EDITOR_TOOLS } from "./EditorTools";
+import "./page.css"; // 추가된 CSS 파일
 
 //props
 type Props = {
@@ -25,7 +26,6 @@ const EditorBlock = ({ data, onChange, holder }: Props) => {
         async onChange(api, event) {
           const data = await api.saver.save();
           setText(data.blocks);
-          console.log(data.blocks);
         },
       });
       ref.current = editor;
@@ -39,7 +39,12 @@ const EditorBlock = ({ data, onChange, holder }: Props) => {
     };
   }, []);
 
-  return <div id="editor" />;
+  return (
+    <>
+      <p>에디터</p>
+      <div id="editor" />
+    </>
+  );
 };
 
 export default memo(EditorBlock);

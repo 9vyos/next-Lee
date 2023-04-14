@@ -7,6 +7,7 @@ export default function Main() {
     <div className={styles.main_wrap}>
       <Grid />
       <Tables />
+      <iframe src="./build/index.html" frameborder="0"></iframe>
     </div>
   );
 }

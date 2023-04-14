@@ -3,23 +3,24 @@ import "../globals.css";
 import Link from "next/link";
 
 const navigation = [
-  { name: "Dashboard", href: "/", icon: HomeIcon, count: "5", current: true },
+  { name: "Dashboard", href: "/", icon: HomeIcon, current: true },
   { name: "Editor", href: "editor", icon: UsersIcon, current: false },
-  { name: "Projects", href: "#", icon: FolderIcon, count: "12", current: false },
-  { name: "Calendar", href: "#", icon: CalendarIcon, count: "20+", current: false },
-  { name: "Documents", href: "#", icon: DocumentDuplicateIcon, current: false },
-  { name: "Reports", href: "#", icon: ChartPieIcon, current: false },
+  { name: "Graph", href: "graph", icon: FolderIcon, current: false },
+  { name: "Setting", href: "setting", icon: FolderIcon, current: false },
+  { name: "Restful Api", href: "restful", icon: FolderIcon, current: false },
+  { name: "GraphQL", href: "graphql", icon: FolderIcon, current: false },
+  { name: "Board", href: "apple", icon: FolderIcon, current: false },
 ];
+
 function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Sidebar() {
-  console.log(navigation);
   return (
     <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6">
       <div className="flex h-16 shrink-0 items-center">
-        <img className="h-auto w-auto mt-5" src="./logo.png" alt="Your Company" />
+        <img className="h-auto w-auto mt-5" src="/logo.png" alt="Your Company" />
       </div>
       <nav className="flex flex-1 flex-col">
         <ul role="list" className="flex flex-1 flex-col gap-y-7">
